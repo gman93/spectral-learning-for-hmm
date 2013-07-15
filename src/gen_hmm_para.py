@@ -43,8 +43,8 @@ class Hmm:
             if(i+1<seq.shape[1]-1):
                 tri[int(seq[0,i+2]-1),int(seq[0,i])-1,int(seq[0,i+1])-1]=1+tri[int(seq[0,i+2])-1,int(seq[0,i])-1,int(seq[0,i+1])-1]
         uni=np.divide(uni,seq.shape[1])
-        bi=bi/seq.shape[1]
-        tri=tri/seq.shape[1]
+        bi=np.divide(bi,seq.shape[1])
+        tri=np.divide(tri,seq.shape[1])
         
         [u,sing_val,v]=linalg.svd(bi)
         b_one=(u.T).dot(uni.T)
@@ -53,7 +53,7 @@ class Hmm:
         b_inf=linalg.pinv(bi.T.dot(u)).dot(uni.T)
         b_x=np.zeros(tri.shape,dtype=np.float128)
         for i in range(tri.shape[2]):
-            b_x[:,:,i]=(u.T.dot(tri[:,:,i])).dot(linalg.pinv(u.T.dot(bi)))
+            b_x[:,:,i]=((u.T).dot(tri[:,:,i])).dot(linalg.pinv((u.T).dot(bi)))
         
         self.B_inf=b_inf
         self.B_one=b_one
@@ -84,13 +84,13 @@ class Hmm:
     def hmm_seq_prob(self,seq):
         "this function return the probability of a sequance according to the hmm "
         in_state=None
-        for i in range(seq.shape[1]-1):
-            if in_state==None:
+        for i in range(seq.shape[1]):
+            if i==0:
                 in_state=self.B_x[:,:,seq[0,i]-1]
             else:
                 in_state= self.B_x[:,:,seq[0,i]-1].dot(in_state)
    
-        prob=self.B_inf.T.dot(in_state).dot(self.B_one)
+        prob=(self.B_inf.T.dot(in_state)).dot(self.B_one)
         print "probability of the sequance is ",prob
         
         return prob
