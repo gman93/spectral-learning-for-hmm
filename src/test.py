@@ -19,3 +19,7 @@ hmm.learn_hmm(seq)
 
 hmm.hmm_seq_prob(new_seq)
 hmm.prb_hmm(new_seq)
+
+print hmm.B_inf
+print hmm.B_one
+print hmm.B_x

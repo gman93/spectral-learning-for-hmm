@@ -39,9 +39,9 @@ class Hmm:
         
             uni[0,int(seq[0,i]-1)]=1+int(uni[0,int(seq[0,i])-1])
             if(i<seq.shape[1]-1):
-                bi[int(seq[0,i])-1,int(seq[0,i+1])-1]=1+bi[int(seq[0,i])-1,int(seq[0,i+1])-1]
+                bi[int(seq[0,i+1])-1,int(seq[0,i])-1]=1+bi[int(seq[0,i+1])-1,int(seq[0,i])-1]
             if(i+1<seq.shape[1]-1):
-                tri[int(seq[0,i]-1),int(seq[0,i+2])-1,int(seq[0,i+1])-1]=1+tri[int(seq[0,i])-1,int(seq[0,i+2])-1,int(seq[0,i+1])-1]
+                tri[int(seq[0,i+2]-1),int(seq[0,i])-1,int(seq[0,i+1])-1]=1+tri[int(seq[0,i+2])-1,int(seq[0,i])-1,int(seq[0,i+1])-1]
         uni=np.divide(uni,seq.shape[1])
         bi=bi/seq.shape[1]
         tri=tri/seq.shape[1]
