@@ -12,7 +12,6 @@ def read_matrix(file_name,delimiter="\t"):
     i=0
     temp=lines[0]
     temp=temp.split(delimiter)
-    print(len(temp))
     matrix=np.zeros((len(lines),len(temp)),dtype=np.float128)
     
     for line in lines:

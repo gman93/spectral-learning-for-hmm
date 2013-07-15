@@ -34,7 +34,6 @@ class Hmm:
         uni=np.zeros((1,10),dtype=np.float128)
         bi=np.zeros((10,10),dtype=np.float128)
         tri=np.zeros((10,10,10),dtype=np.float128)
-        print tri.shape
         
         for i in range(seq.shape[1]-1):
         
@@ -43,7 +42,6 @@ class Hmm:
                 bi[int(seq[0,i])-1,int(seq[0,i+1])-1]=1+bi[int(seq[0,i])-1,int(seq[0,i+1])-1]
             if(i+1<seq.shape[1]-1):
                 tri[int(seq[0,i]-1),int(seq[0,i+2])-1,int(seq[0,i+1])-1]=1+tri[int(seq[0,i])-1,int(seq[0,i+2])-1,int(seq[0,i+1])-1]
-        print tri.shape
         uni=np.divide(uni,seq.shape[1])
         bi=bi/seq.shape[1]
         tri=tri/seq.shape[1]
@@ -60,11 +58,7 @@ class Hmm:
         self.B_inf=b_inf
         self.B_one=b_one
         self.B_x=b_x
-        print b_inf
-        print "-------------------------------------------------------------------------"
-        print b_one
-        print "--------------------------------------------------------------------------"
-        print b_x   
+     
         
 
 
@@ -91,14 +85,11 @@ class Hmm:
         "this function return the probability of a sequance according to the hmm "
         in_state=None
         for i in range(seq.shape[1]-1):
-            print type(int(i))
             if in_state==None:
                 in_state=self.B_x[:,:,seq[0,i]-1]
             else:
                 in_state= self.B_x[:,:,seq[0,i]-1].dot(in_state)
-        print self.B_inf.shape
-        print self.B_one.shape
-        print self.B_x.shape
+   
         prob=self.B_inf.T.dot(in_state).dot(self.B_one)
         print "probability of the sequance is ",prob
         
