@@ -51,9 +51,9 @@ class Hmm:
         
         
         b_inf=linalg.pinv(bi.T.dot(u)).dot(uni.T)
-        b_x=np.zeros(tri.shape,dtype=np.float16)
-        for i in range(tri.shape[0]):
-            b_x[:,:,i]=u.T.dot(tri[:,:,i]).dot(linalg.pinv(u.T.dot(bi)))
+        b_x=np.zeros(tri.shape,dtype=np.float128)
+        for i in range(tri.shape[2]):
+            b_x[:,:,i]=(u.T.dot(tri[:,:,i])).dot(linalg.pinv(u.T.dot(bi)))
         
         self.B_inf=b_inf
         self.B_one=b_one
