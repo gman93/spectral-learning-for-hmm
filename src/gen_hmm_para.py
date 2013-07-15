@@ -19,9 +19,9 @@ class Hmm:
             
     def generate_hmm_para(self,no_of_hidden,no_of_obs): 
         """this function generate a random a Hmm"""
-        TPM=np.random.rand((no_of_hidden,no_of_hidden),dtype = float64)
-        OM=np.random.rand((no_of_obs,no_of_hidden),dtype = float64)
-        PI=np.random.rand((1,no_of_obs),dtype = float64)
+        TPM=np.random.rand((no_of_hidden,no_of_hidden),dtype = np.float128)
+        OM=np.random.rand((no_of_obs,no_of_hidden),dtype = np.float128)
+        PI=np.random.rand((1,no_of_obs),dtype = np.float128)
         
         TPM=row_normalize(TPM)
         OM=row_normalize(OM.T)
