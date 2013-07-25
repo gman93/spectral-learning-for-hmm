@@ -15,12 +15,13 @@ TPM=read_matrix("tpm")
 PI=read_matrix("pi")
 new_seq=read_matrix("new_seq")
 hmm=Hmm(5,10,TPM,OM,PI)
-hmm.learn_hmm(seq)
+hmm.learn_hmm(seq,5)
 
 hmm.hmm_seq_prob(new_seq)
 hmm.prb_hmm(new_seq)
-'''
-print hmm.B_inf
+
+
+'''print hmm.B_inf
 print hmm.B_one
 print hmm.B_x
 '''

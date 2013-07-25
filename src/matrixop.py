@@ -4,6 +4,12 @@ def row_normalize(x):
         x[i,:]=x[i,:]/x[i,:].sum()
     return x
 
+def mean_normalize(mat):
+    for i in range(mat.shape[1]):
+        mat[:,i]=np.divide(mat[:,i],np.mean(mat[:,i]))
+    return mat
+
+
 def read_matrix(file_name,delimiter="\t"):
     
     """ this function returns a matrix stored in a file where the values are separated by a delimiter"""
