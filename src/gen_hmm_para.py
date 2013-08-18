@@ -76,7 +76,7 @@ class Hmm:
 
         '''for i in range(tri.shape[2]):
             b_x[:,:,i]=(tri[:,:,i]).dot(linalg.pinv(bi))
-    '''cd 
+    '''
 
         if (self.TPM != None):
             for i in range(self.no_of_hidden_state):

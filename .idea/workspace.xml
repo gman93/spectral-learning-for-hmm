@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe4cb056-59c0-4fde-b0e8-57dfb30886d4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/error_vs_len.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/result.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spectral hmm.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/spectral_learning.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/both_seq" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/nshmm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/om2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pi2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/seq1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/seq2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tpm2" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gen_hmm_para.py" afterPath="$PROJECT_DIR$/src/gen_hmm_para.py" />
     </list>
     <ignored path="spectral_learning_hmm.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fe4cb056-59c0-4fde-b0e8-57dfb30886d4" time="1376852327218" ignored="false" />
+    <file path="/Dummy.txt" changelist="fe4cb056-59c0-4fde-b0e8-57dfb30886d4" time="1376852824672" ignored="false" />
     <file path="/gen_hmm_para.py" changelist="fe4cb056-59c0-4fde-b0e8-57dfb30886d4" time="1376852351522" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +40,7 @@
       <file leaf-file-name="gen_hmm_para.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gen_hmm_para.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="10" selection-start="3021" selection-end="3021" vertical-scroll-proportion="0.9306759">
+            <state line="78" column="7" selection-start="3018" selection-end="3018" vertical-scroll-proportion="0.41074523">
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -220,7 +207,11 @@
       <created>1376852342883</created>
       <updated>1376852342883</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test commit&#10;">
+      <created>1376852828049</created>
+      <updated>1376852828049</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -318,7 +309,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gen_hmm_para.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="10" selection-start="3021" selection-end="3021" vertical-scroll-proportion="0.9306759">
+        <state line="78" column="7" selection-start="3018" selection-end="3018" vertical-scroll-proportion="0.41074523">
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
