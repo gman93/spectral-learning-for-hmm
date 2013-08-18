@@ -13,6 +13,7 @@ def mean_normalize(mat):
 def read_matrix(file_name,delimiter="\t"):
     
     """ this function returns a matrix stored in a file where the values are separated by a delimiter"""
+
     input_file=open(file_name)
     lines=input_file.readlines()
     i=0
